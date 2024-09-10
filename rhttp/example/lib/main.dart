@@ -36,9 +36,7 @@ class _MyAppState extends State<MyApp> {
                     final res = await Rhttp.get(
                       'https://reqres.in/api/users',
                       query: {'page': '5'},
-                      settings: const ClientSettings(
-                        httpVersionPref: HttpVersionPref.http3,
-                      ),
+                      
                     );
                     setState(() {
                       response = res;

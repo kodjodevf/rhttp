@@ -44,9 +44,7 @@ class _MyAppState extends State<MyApp> {
                     headers: const HttpHeaders.map({
                       HttpHeaderName.lastModified: 'application/json',
                     }),
-                    settings: const ClientSettings(
-                      httpVersionPref: HttpVersionPref.http3,
-                    ),
+                    settings: const ClientSettings(),
                   );
 
                   print('Got response: $res');

@@ -921,9 +921,7 @@ impl SseDecode for crate::api::http::HttpVersion {
             0 => crate::api::http::HttpVersion::Http09,
             1 => crate::api::http::HttpVersion::Http10,
             2 => crate::api::http::HttpVersion::Http11,
-            3 => crate::api::http::HttpVersion::Http2,
-            4 => crate::api::http::HttpVersion::Http3,
-            5 => crate::api::http::HttpVersion::Other,
+            3 => crate::api::http::HttpVersion::Other,
             _ => unreachable!("Invalid variant for HttpVersion: {}", inner),
         };
     }
@@ -936,9 +934,7 @@ impl SseDecode for crate::api::http::HttpVersionPref {
         return match inner {
             0 => crate::api::http::HttpVersionPref::Http10,
             1 => crate::api::http::HttpVersionPref::Http11,
-            2 => crate::api::http::HttpVersionPref::Http2,
-            3 => crate::api::http::HttpVersionPref::Http3,
-            4 => crate::api::http::HttpVersionPref::All,
+            2 => crate::api::http::HttpVersionPref::All,
             _ => unreachable!("Invalid variant for HttpVersionPref: {}", inner),
         };
     }
@@ -1697,9 +1693,7 @@ impl flutter_rust_bridge::IntoDart for crate::api::http::HttpVersion {
             Self::Http09 => 0.into_dart(),
             Self::Http10 => 1.into_dart(),
             Self::Http11 => 2.into_dart(),
-            Self::Http2 => 3.into_dart(),
-            Self::Http3 => 4.into_dart(),
-            Self::Other => 5.into_dart(),
+            Self::Other => 3.into_dart(),
             _ => unreachable!(),
         }
     }
@@ -1718,9 +1712,7 @@ impl flutter_rust_bridge::IntoDart for crate::api::http::HttpVersionPref {
         match self {
             Self::Http10 => 0.into_dart(),
             Self::Http11 => 1.into_dart(),
-            Self::Http2 => 2.into_dart(),
-            Self::Http3 => 3.into_dart(),
-            Self::All => 4.into_dart(),
+            Self::All => 2.into_dart(),
             _ => unreachable!(),
         }
     }
@@ -2225,9 +2217,7 @@ impl SseEncode for crate::api::http::HttpVersion {
                 crate::api::http::HttpVersion::Http09 => 0,
                 crate::api::http::HttpVersion::Http10 => 1,
                 crate::api::http::HttpVersion::Http11 => 2,
-                crate::api::http::HttpVersion::Http2 => 3,
-                crate::api::http::HttpVersion::Http3 => 4,
-                crate::api::http::HttpVersion::Other => 5,
+                crate::api::http::HttpVersion::Other => 3,
                 _ => {
                     unimplemented!("");
                 }
@@ -2244,9 +2234,7 @@ impl SseEncode for crate::api::http::HttpVersionPref {
             match self {
                 crate::api::http::HttpVersionPref::Http10 => 0,
                 crate::api::http::HttpVersionPref::Http11 => 1,
-                crate::api::http::HttpVersionPref::Http2 => 2,
-                crate::api::http::HttpVersionPref::Http3 => 3,
-                crate::api::http::HttpVersionPref::All => 4,
+                crate::api::http::HttpVersionPref::All => 2,
                 _ => {
                     unimplemented!("");
                 }

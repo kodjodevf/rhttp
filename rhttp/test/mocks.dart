@@ -56,8 +56,6 @@ class MockRustLibApi extends Mock implements RustLibApi {
           HttpVersion.http09 => rust_http.HttpVersion.http09,
           HttpVersion.http1_0 => rust_http.HttpVersion.http10,
           HttpVersion.http1_1 => rust_http.HttpVersion.http11,
-          HttpVersion.http2 => rust_http.HttpVersion.http2,
-          HttpVersion.http3 => rust_http.HttpVersion.http3,
           HttpVersion.other => rust_http.HttpVersion.other,
         },
         statusCode: statusCode ?? 200,

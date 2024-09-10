@@ -45,7 +45,6 @@ export 'src/model/request.dart'
         HttpBodyBytes,
         HttpBodyBytesStream,
         HttpBodyForm,
-        HttpBodyMultipart,
         MultipartItem,
         MultiPartText,
         MultiPartBytes,

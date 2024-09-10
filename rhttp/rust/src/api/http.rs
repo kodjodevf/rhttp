@@ -75,8 +75,6 @@ pub enum MultipartValue {
 pub enum HttpVersionPref {
     Http10,
     Http11,
-    Http2,
-    Http3,
     All,
 }
 
@@ -90,8 +88,6 @@ pub enum HttpVersion {
     Http09,
     Http10,
     Http11,
-    Http2,
-    Http3,
     Other,
 }
 
@@ -101,8 +97,6 @@ impl HttpVersion {
             Version::HTTP_09 => HttpVersion::Http09,
             Version::HTTP_10 => HttpVersion::Http10,
             Version::HTTP_11 => HttpVersion::Http11,
-            Version::HTTP_2 => HttpVersion::Http2,
-            Version::HTTP_3 => HttpVersion::Http3,
             _ => HttpVersion::Other,
         }
     }
@@ -371,8 +365,6 @@ async fn make_http_request_helper(
         request = match client.http_version_pref {
             HttpVersionPref::Http10 => request.version(Version::HTTP_10),
             HttpVersionPref::Http11 => request.version(Version::HTTP_11),
-            HttpVersionPref::Http2 => request.version(Version::HTTP_2),
-            HttpVersionPref::Http3 => request.version(Version::HTTP_3),
             HttpVersionPref::All => request,
         };
 

@@ -158,8 +158,6 @@ fn create_client(settings: ClientSettings) -> Result<RequestClient, RhttpError> 
 
         client = match settings.http_version_pref {
             HttpVersionPref::Http10 | HttpVersionPref::Http11 => client.http1_only(),
-            HttpVersionPref::Http2 => client.http2_prior_knowledge(),
-            HttpVersionPref::Http3 => client.http3_prior_knowledge(),
             HttpVersionPref::All => client,
         };
 

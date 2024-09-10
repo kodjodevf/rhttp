@@ -175,8 +175,6 @@ enum HttpVersion {
   http09,
   http10,
   http11,
-  http2,
-  http3,
   other,
   ;
 }
@@ -184,8 +182,6 @@ enum HttpVersion {
 enum HttpVersionPref {
   http10,
   http11,
-  http2,
-  http3,
   all,
   ;
 }

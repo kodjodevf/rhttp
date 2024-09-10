@@ -81,8 +81,6 @@ enum HttpVersion {
   http09,
   http1_0,
   http1_1,
-  http2,
-  http3,
   other,
   ;
 }
@@ -128,8 +126,6 @@ HttpVersion parseHttpVersion(rust.HttpVersion version) {
     rust.HttpVersion.http09 => HttpVersion.http09,
     rust.HttpVersion.http10 => HttpVersion.http1_0,
     rust.HttpVersion.http11 => HttpVersion.http1_1,
-    rust.HttpVersion.http2 => HttpVersion.http2,
-    rust.HttpVersion.http3 => HttpVersion.http3,
     rust.HttpVersion.other => HttpVersion.other,
   };
 }
